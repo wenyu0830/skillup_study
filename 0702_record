@@ -6,22 +6,3 @@
 
 
 
-void ofApp::setup(){
-    ofSetFrameRate(60);
-    ofEnableBlendMode(OF_BLENDMODE_ALPHA);
-    
-    blur.setup(ofGetWidth(), ofGetHeight(), 32, .2, 1, 0.5);
-    
-    image.load("2018-12-18-17-26-09-613_user.png");
-}
-
-void ofApp::draw(){
-
-    blur.begin();
-    ofClear(255);
-    image.draw(0,0);
-    blur.end();
-    blur.draw();
-    
- 
-}
